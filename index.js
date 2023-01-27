@@ -17,7 +17,7 @@ const client = mailgun.client({
 });
 
 app.get("/", (req, res) => {
-  res.status(200).json({ message: "Route Up !" });
+  res.json("🚀 Server *ON* 🚀");
 });
 
 app.post("/form", async (req, res) => {
@@ -39,6 +39,6 @@ app.post("/form", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Server started");
 });
